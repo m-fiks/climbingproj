@@ -5,7 +5,7 @@ import axios from 'axios';
 class Body extends Component {
 
     state = {
-        routeNames: []
+        routes: []
     }
     
     componentDidMount() {
@@ -14,18 +14,17 @@ class Body extends Component {
             return results.json();
         })
         .then(data => {
-            //console.log(data.routes)
-            let routes = data.routes;
-            let routeNames = routes.map(route => route.name)
-            console.log(routeNames)
-            this.setState({routeNames: routeNames})
+            let routesData = data.routes;
+            let routes = routesData.map(route => route)
+            this.setState({routes: routes})
+            console.log(this.state.routes)
         })
     }
 
     render () {
         return (
             <div className="six wide column">
-               {this.state.routeNames}
+             whack a mole
             </div>
         )
     }

@@ -12,7 +12,7 @@ class App extends Component {
             <Header/>
             <Body/>
             <Search/>
-          </div>
+        </div>
     );
   }
 }
