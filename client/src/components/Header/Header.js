@@ -4,7 +4,9 @@ class Main extends Component {
 
     render () {
         return (
-            <h1>GOOOOHHHHHH</h1>
+            <div className="ui large header">
+                yugioh
+            </div>
         )
     }
 }

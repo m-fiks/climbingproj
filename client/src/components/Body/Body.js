@@ -24,7 +24,7 @@ class Body extends Component {
 
     render () {
         return (
-            <div className="container">
+            <div className="six wide column">
                {this.state.routeNames}
             </div>
         )

@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Main from './components/Main'
+import Header from './components/Header'
 import Body from './components/Body'
+import Search from './components/Search'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Main/>
-        </header>
-        <p className="App-intro">
-         <Body/>
-        </p>
-      </div>
+        <div className="ui grid container">
+            <Header/>
+            <Body/>
+            <Search/>
+          </div>
     );
   }
 }
