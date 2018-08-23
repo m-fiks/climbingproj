@@ -24,7 +24,11 @@ class Body extends Component {
     render () {
         return (
             <div className="six wide column">
-             whack a mole
+                <ol className="ui list">
+                    {(this.state.routes).map(route => 
+                        <li> {route.name} </li>
+                    )}
+                </ol>
             </div>
         )
     }

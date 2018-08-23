@@ -131,7 +131,7 @@
 ---------------*/
 
 h1.ui.header {
-  font-size: 2rem;
+  font-size: 2.25em;
 }
 h2.ui.header {
   font-size: 1.71428571rem;
@@ -169,7 +169,7 @@ h5.ui.header .sub.header {
 
 .ui.huge.header {
   min-height: 1em;
-  font-size: 2em;
+  font-size: 2.25em;
 }
 .ui.large.header {
   font-size: 1.71428571em;
@@ -281,7 +281,7 @@ h5.ui.header .sub.header {
 *******************************/
 
 .ui.disabled.header {
-  opacity: 0.45;
+  opacity: 0.3;
 }
 
 
@@ -347,13 +347,13 @@ a.ui.inverted.red.header:hover {
 /*--- Orange ---*/
 
 .ui.orange.header {
-  color: #F2711C !important;
+  color: #D26911 !important;
 }
 a.ui.orange.header:hover {
-  color: #f26202 !important;
+  color: #c35c07 !important;
 }
 .ui.orange.dividing.header {
-  border-bottom: 2px solid #F2711C;
+  border-bottom: 2px solid #D26911;
 }
 
 /* Inverted */
@@ -407,13 +407,13 @@ a.ui.inverted.yellow.header:hover {
 /*--- Green ---*/
 
 .ui.green.header {
-  color: #21BA45 !important;
+  color: #60B044 !important;
 }
 a.ui.green.header:hover {
-  color: #16ab39 !important;
+  color: #54a238 !important;
 }
 .ui.green.dividing.header {
-  border-bottom: 2px solid #21BA45;
+  border-bottom: 2px solid #60B044;
 }
 
 /* Inverted */
@@ -447,13 +447,13 @@ a.ui.inverted.teal.header:hover {
 /*--- Blue ---*/
 
 .ui.blue.header {
-  color: #2185D0 !important;
+  color: #80A6CD !important;
 }
 a.ui.blue.header:hover {
-  color: #1678c2 !important;
+  color: #6999ca !important;
 }
 .ui.blue.dividing.header {
-  border-bottom: 2px solid #2185D0;
+  border-bottom: 2px solid #80A6CD;
 }
 
 /* Inverted */
@@ -617,7 +617,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.dividing.header {
   padding-bottom: 0.23076923rem;
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 .ui.dividing.header .sub.header {
   padding-bottom: 0.23076923rem;
@@ -638,8 +638,8 @@ a.ui.inverted.grey.header:hover {
   padding: 0.76923077rem 1rem;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #D4D4D5;
-  border-radius: 0.30769231rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 0.30769em;
 }
 .ui.tiny.block.header {
   font-size: 0.84615385rem;
@@ -668,7 +668,7 @@ a.ui.inverted.grey.header:hover {
   margin-right: -1px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #D4D4D5;
+  border: 1px solid #DDDDDD;
 }
 .ui.attached.block.header {
   background: #F3F4F5;
@@ -681,12 +681,12 @@ a.ui.inverted.grey.header:hover {
 }
 .ui.top.attached.header {
   margin-bottom: 0em;
-  border-radius: 0.30769231rem 0.30769231rem 0em 0em;
+  border-radius: 0.30769em 0.30769em 0em 0em;
 }
 .ui.bottom.attached.header {
   margin-top: 0em;
   border-top: none;
-  border-radius: 0em 0em 0.30769231rem 0.30769231rem;
+  border-radius: 0em 0em 0.30769em 0.30769em;
 }
 
 /* Attached Sizes */
@@ -713,12 +713,6 @@ a.ui.inverted.grey.header:hover {
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-size: 1.28571429em;
 }
-
-
-/*******************************
-         Theme Overrides
-*******************************/
-
 
 
 /*******************************

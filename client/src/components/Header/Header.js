@@ -4,10 +4,10 @@ class Main extends Component {
 
     render () {
         return (
-            <div className="twelve wide column">
-                <div className="ui large header">
+            <div className="sixteen wide column">
+                <h1 className="ui header">
                     yugioh
-                </div>
+                </h1>
             </div>
         )
     }
