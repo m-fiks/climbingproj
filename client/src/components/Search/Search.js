@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 
-class Search extends Component {
-
-    render() {
-        return (
+const Search = props => (
         <div className="ten wide column">
             <div className="ui form">
                 <div className="field">
                     <label>Find Routes!</label>
-                    <input type="text"/>
+                    <input onChange={props.getInput} id="location" type="text" placeholder="Example City, MN"/>
                 </div>
-                <button className="ui inverted violet tiny button">Search Bro</button>
+                <button onClick={props.getLocation} className="ui inverted violet tiny button">Search Bro</button>
             </div>
         </div>
-        )
-    }
-}
+)
 
 export default Search;
