@@ -14,8 +14,11 @@ class Main extends Component {
       this.setState({location: e.target.value})
   }
       
-  getLocation = e => {
+  getLocation = () => {
     console.log(this.state.location)
+    //convert to lat, long using geolocation api???
+    //look at first proj
+    //this needs to be sent to Main.js?
   }
 
   render() {
