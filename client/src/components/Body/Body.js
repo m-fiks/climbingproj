@@ -18,17 +18,22 @@ class Body extends Component {
         .then(data => {
             let routesData = data.routes;
             let routes = routesData.map(route => route)
-            this.setState({routes: routes})
+            let newRoutes = routes.slice(0, 25)
+            this.setState({routes: newRoutes})
             console.log(this.state.routes)
         })
     }
 
     render () {
         return (
-            <div className="six wide column main">
+            <div className="ui eight wide column routeList">
                 <ol className="ui list">
                     {(this.state.routes).map(route => 
-                        <li> {route.name} </li>
+                        <li> {route.name}
+                                {'     '}
+                             <a href={route.url}>LINK </a>
+                        </li>
+
                     )}
                 </ol>
             </div>

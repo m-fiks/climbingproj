@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import './Search.css';
+
 
 const Search = props => (
-        <div className="ten wide column">
-            <div className="ui form">
+    <div className="ui six wide column">
+            <div className="ui form searchBar">
                 <div className="field">
-                    <label>Find Routes!</label>
+                    <label><h3>Find Routes!</h3></label>
+                    <br/>
                     <input onChange={props.getInput} id="location" type="text" placeholder="Example City, MN"/>
                 </div>
-                <button onClick={props.getLocation} className="ui inverted violet tiny button">Search Bro</button>
+                <button onClick={props.getLocation} className="ui right floated inverted violet tiny button">Search Bro</button>
             </div>
-        </div>
+    </div>
 )
 
 export default Search;
