@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Body.css'
 import Search from '../Search';
 import axios from 'axios';
 
@@ -24,7 +25,7 @@ class Body extends Component {
 
     render () {
         return (
-            <div className="six wide column">
+            <div className="six wide column main">
                 <ol className="ui list">
                     {(this.state.routes).map(route => 
                         <li> {route.name} </li>
