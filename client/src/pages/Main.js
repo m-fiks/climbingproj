@@ -26,7 +26,6 @@ class Main extends Component {
         <div className="ui grid container">
             <Header/>
             <Body/>
-         
             <Search
                 getInput = {this.getInput}
                 getLocation = {this.getLocation}

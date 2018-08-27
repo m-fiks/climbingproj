@@ -31,7 +31,7 @@ class Body extends Component {
                     {(this.state.routes).map(route => 
                         <li> {route.name}
                                 {'     '}
-                             <a href={route.url}>LINK </a>
+                             <a target="_blank" href={route.url}>LINK </a>
                         </li>
 
                     )}
