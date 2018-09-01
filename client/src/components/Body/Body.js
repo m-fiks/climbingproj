@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 import './Body.css'
-import Search from '../Search';
+import Main from '../../pages/Main.js';
 import axios from 'axios';
 
 
 class Body extends Component {
 
-    state = {
-        routes: []
+    constructor(props){
+        super(props);
+        this.state = {
+            routes: [],
+            location: null,
+        }
     }
-    
+
+    //needs to be when user clicks search button dingus
     componentDidMount() {
+        //lat and long will be something.props declared on main page or search page
         fetch('https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=45.301167&lon=-92.534088&maxDistance=10&minDiff=5.6&maxDiff=5.10&key=200341001-eabe8c0fe32fc26aaa0ad951e62f04cf')
         .then(results => {
             return results.json();
