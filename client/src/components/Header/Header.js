@@ -10,6 +10,12 @@ class Main extends Component {
                 <h1 className="ui teal header">
                     find me something to climb
                 </h1>
+            
+                <div className="ui medium breadcrumb">
+                    <div className="section">main</div>
+                    <div className="divider">/</div>
+                    <div className="section">saved</div>
+                </div>
             </div>
         </div>
         )
