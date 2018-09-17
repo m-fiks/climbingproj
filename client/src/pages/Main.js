@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from '../components/Header'
-import Body from '../components/Body'
 import Search from '../components/Search'
 
 class Main extends Component {
@@ -43,10 +42,17 @@ class Main extends Component {
     return (
         <div className="ui grid container">
             <Header/>
-            <Body
-              location = {this.state.location}
-              routes = {this.state.routes}
-            />
+            <div className="ui eight wide column routeList">
+                <ol className="ui list">
+                    {(this.state.routes).map(route => 
+                        <li key={route.id}> {route.name}
+                                {'     '}
+                             <a target="_blank" href={route.url}>LINK </a>
+                        </li>
+
+                    )}
+                </ol>
+            </div>
             <Search
                 getInput = {this.getInput}
                 getLocation = {this.getLocation}
