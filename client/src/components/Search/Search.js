@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Search.css';
 
 
@@ -10,7 +10,9 @@ const Search = props => (
                     <br/>
                     <input onChange={props.getInput} id="location" type="text" placeholder="Example City, MN"/>
                 </div>
-                <button onClick={props.getLocation} className="ui right floated inverted violet tiny button">Search Bro</button>
+                <button className="ui right floated inverted violet tiny button">Search br0</button>
+                <button onClick={props.getLocation} className="ui right floated inverted violet tiny button">Search My Location</button>
+                <button onClick={props.lookUp}>fhfhsds</button>
             </div>
     </div>
 )
