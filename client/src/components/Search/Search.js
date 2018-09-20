@@ -12,7 +12,6 @@ const Search = props => (
                 </div>
                 <button className="ui right floated inverted violet tiny button">Search br0</button>
                 <button onClick={props.getLocation} className="ui right floated inverted violet tiny button">Search My Location</button>
-                <button onClick={props.lookUp}>fhfhsds</button>
             </div>
     </div>
 )

@@ -23,11 +23,13 @@ class Main extends Component {
         navigator.geolocation.getCurrentPosition((position) => {
           this.setState({lat: position.coords.latitude})
           this.setState({long: position.coords.longitude})
+          this.lookUp();
         });
     };
   }
 
   lookUp = () => {
+    //find routes nearby and display to DOM
     console.log(this.state)
     fetch(`https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=${this.state.lat}&lon=${this.state.long}&maxDistance=50&minDiff=5.6&maxDiff=5.10&key=200341001-eabe8c0fe32fc26aaa0ad951e62f04cf`)
     .then(results => {
@@ -44,7 +46,7 @@ class Main extends Component {
             <Header/>
             <div className="ui eight wide column routeList">
                 <ol className="ui list">
-                    {(this.state.routes).map(route => 
+                    {(this.state.routes).slice(0,25).map(route => 
                         <li key={route.id}> {route.name}
                                 {'     '}
                              <a target="_blank" href={route.url}>LINK </a>
@@ -57,7 +59,6 @@ class Main extends Component {
                 getInput = {this.getInput}
                 getLocation = {this.getLocation}
                 location={this.location}
-                lookUp={this.lookUp}
            />
        </div>
     );
