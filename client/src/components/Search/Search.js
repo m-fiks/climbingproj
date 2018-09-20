@@ -10,7 +10,7 @@ const Search = props => (
                     <br/>
                     <input onChange={props.getInput} id="location" type="text" placeholder="Example City, MN"/>
                 </div>
-                <button className="ui right floated inverted violet tiny button">Search br0</button>
+                <button onClick={props.searchLocation} className="ui right floated inverted violet tiny button">Search br0</button>
                 <button onClick={props.getLocation} className="ui right floated inverted violet tiny button">Search My Location</button>
             </div>
     </div>

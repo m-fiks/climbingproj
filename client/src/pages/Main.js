@@ -12,13 +12,31 @@ class Main extends Component {
   }
 
   getInput = e => {
-      //console.log(e.target.value)
-      this.setState({location: e.target.value})
-  }
-      
-  getLocation = () => {
     //convert to lat, long using geolocation api???
     //look at first proj
+      this.setState({location: e.target.value})
+  }
+
+  searchLocation = () => {
+    console.log(this.state.location)
+    let url = `http://www.mapquestapi.com/geocoding/v1/address?key=e9qM1hzBzG6h2nSfjN3sOrrRoKhUnUHO&location=${this.state.location}`
+    fetch(url)
+    .then(results => results.json())
+    .then(data => {
+        let latLng = data.results[0].locations[0].latLng;
+        console.log(latLng)
+        this.setState({
+            lat: latLng.lat,
+            long: latLng.lng
+        })
+        this.lookUp();
+    })
+  }
+      
+  
+
+  getLocation = () => {
+    //directly get lat & long
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
           this.setState({lat: position.coords.latitude})
@@ -36,6 +54,7 @@ class Main extends Component {
         return results.json();
     })
     .then(data => {
+        console.log(data)
         this.setState({routes: data.routes})
     })
   }
@@ -58,7 +77,7 @@ class Main extends Component {
             <Search
                 getInput = {this.getInput}
                 getLocation = {this.getLocation}
-                location={this.location}
+                searchLocation = {this.searchLocation}
            />
        </div>
     );
